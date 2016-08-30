@@ -1,0 +1,13 @@
+﻿@if (Request.IsAuthenticated) {
+    <div>
+    @using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new { id = "logoutForm" }))
+    {
+        <a href="~/Login">我的管理</a>
+        @Html.AntiForgeryToken()
+        <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+    }
+    </div>
+} else {
+    <a href="~/Login">登录</a>
+    <a href="~/Register" class="green">注册</a>
+}

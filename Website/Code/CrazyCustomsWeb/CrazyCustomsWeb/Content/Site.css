@@ -1,0 +1,693 @@
+﻿.clearFloat{clear: both;}
+a {font-family: Tahoma,"Simsun","Microsoft Yahei","Segoe UI", Verdana, Helvetica, Sans-Serif;}
+
+body {
+    font-size: .85em;
+    font-family: Tahoma,"Simsun","Microsoft Yahei","Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+    font-size:12px;
+    line-height: 1;
+    background-color:#d7e5ef;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+.blueButton {
+    display:block;
+    width:80px;
+    background-color:aliceblue;
+    float:left;
+    text-align:center;
+    border:solid 1px #3ab8f0;
+    padding:5px 5px;
+    text-decoration:none;
+    background: -moz-linear-gradient(top, #53c9f5, #0ca1d7);
+    background: -webkit-gradient(linear, 0 0, 0 10, from(#53c9f5), to(#0ca1d7));
+    background-color: #0ca1d7;
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor:pointer;
+}
+
+.grayButton
+{
+    display:block;
+    width:80px;
+    float:left;
+    text-align:center;
+    border:solid 1px #c3c3c3;
+    padding:5px 5px;
+    text-decoration:none;
+    background: -moz-linear-gradient(top, #acc7ef, #99b1d5);
+    background: -webkit-gradient(linear, 0 0, 0 10, from(#acc7ef), to(#99b1d5));
+    background-color: #99b1d5;
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor:pointer;
+}
+
+.header {
+	background-color: #C9DBEA;
+	background-image: url(images/styleimages/header-bg.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 75px;position:relative;
+}
+
+.wrapper {
+	width: 960px;
+	margin: auto;
+	position:relative;
+}
+
+.pageheader {
+	color: #CCC;
+	background-image: url(images/styleimages/home-bg.png);
+	height: 231px;
+	background-position: center top;
+}
+
+.smallpageheader {
+	color: #CCC;
+	background-image: url(images/styleimages/other-bg.png);
+	height: 114px;
+	background-position: center top;
+}
+
+.pagewrapper {
+	background-image: url(images/styleimages/page-bg.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	min-height:370px;
+}
+
+.logo
+{
+    width:193px;
+    height:56px;
+    background-image: url(images/styleimages/logo.png);
+	background-repeat: no-repeat;
+    display:inline-block;
+    margin-top:10px;
+    float:left;
+}
+
+/*Top navigation menus being*/
+.primary-menu {
+    float:left;
+    margin-top:18px;
+    margin-left:133px;
+}
+
+.primary-menu li {
+    float:left;
+    margin-left: 10px;
+    padding:10px 12px;
+    width:60px;
+    text-align:center;
+    background-color:transparent ;
+    border:solid 1px transparent;
+    cursor:pointer;
+}
+
+.primary-menu li.active {
+    border:solid 1px #b5c5d2;
+    border-radius: 5px;        
+    background: -moz-linear-gradient(top, #d7e5ef, #cbddea);
+    background: -webkit-gradient(linear, 0 0, 0 10, from(#d7e5ef), to(#cbddea));
+    background-color: #d5e3ee;
+}
+
+.primary-menu li:hover {
+    border:solid 1px #b5c5d2;
+    border-radius: 5px;        
+    background: -moz-linear-gradient(top, #bad0df, #bad0df);
+    background: -webkit-gradient(linear, 0 0, 0 10, from(#bad0df), to(#bad0df));
+    background-color: #bad0df;
+}
+
+.primary-menu ul li a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #648cac;
+	text-decoration: none;
+	font-size: 14px;
+	display: block;
+	text-shadow: #FFF 0px 1px 1px;
+}
+
+.loginBtnHolder {
+    float:left;
+    margin-top:25px;
+    margin-left:10px;
+}
+
+.loginBtnHolder a {
+    display:block;
+    width:60px;
+    background-color:aliceblue;
+    float:left;
+    text-align:center;
+    border:solid 1px #3ab8f0;
+    padding:5px 5px;
+    text-decoration:none;
+    background: -moz-linear-gradient(top, #53c9f5, #0ca1d7);
+    background: -webkit-gradient(linear, 0 0, 0 10, from(#53c9f5), to(#0ca1d7));
+    background-color: #0ca1d7;
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.loginBtnHolder a:hover {
+    background: -moz-linear-gradient(top, #62d8ff, #1bb0e6);
+    background: -webkit-gradient(linear, 0 0, 0 10, from(#62d8ff), to(#1bb0e6));
+    background-color: #37c0f2;
+}
+
+.loginBtnHolder a.green {
+    background-color:aliceblue;
+    float:left;
+    text-align:center;
+    border:solid 1px #A0e04a;
+    text-decoration:none;
+    background: -moz-linear-gradient(top, #91df4d, #67c61f);
+    background: -webkit-gradient(linear, 0 0, 0 10, from(#91df4d), to(#67c61f));
+    background-color: #67c61f;
+}
+
+.loginBtnHolder a.green:hover {
+    background: -moz-linear-gradient(top, #a2ef5e, #74d42c);
+    background: -webkit-gradient(linear, 0 0, 0 10, from(#a2ef5e), to(#74d42c));
+    background-color: #87df41;
+}
+/*Top navigation menus end*/
+
+/*注册页面*/
+.ulSpecification li{
+    float:left;
+    clear:left;
+    color:#E1E1E1;
+}
+
+.ulSpecification li h1 {
+    font-size:30px;
+    line-height:50px;
+}
+
+.ulSpecification li p {
+    font-size:20px;
+    text-indent:2em;
+    line-height:25px;
+    width:960px;
+}
+
+#registerForm {
+    float:left;
+    width:570px;
+    margin-top:15px;
+}
+
+.specificationBox {
+    float:left;
+    background-image: url(images/styleimages/home-sidebar-bg.png);
+	background-repeat: no-repeat;
+    width:369px;
+    height:512px;
+    margin-top:15px;
+    margin-left:15px;
+}
+
+.specificationBox h3 {
+    color:#065f9f;
+    font-size:24px;
+    line-height:24px;
+    margin-top:20px;
+    margin-bottom:0px;
+    margin-left:50px;
+}
+
+.specificationBox ul {
+    margin-left:30px;
+    margin-right:30px;
+    list-style-type:disc;
+    margin-top:20px;
+    color:#0c6fa5;
+}
+
+.specificationBox ul li {
+    margin-bottom:20px;
+}
+
+.specificationBox ul li p {
+    line-height:22px;
+    color:#818181;
+}
+
+#divRegisterForm h3{
+    font-size:26px;
+    color:#1E1E1E;
+}
+#divRegisterForm h4{
+    font-size:18px;
+    margin-bottom:10px;
+    margin-top:8px;
+    text-indent:2em;
+    line-height:22px;
+    color:#0c6fa5;
+}
+
+.ulSubmitContentForm li {
+    margin-bottom:15px;
+}
+
+.ulSubmitContentForm li label{
+    display:inline-block;
+    height:25px;
+    line-height:25px;
+    color:#92A8B2;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.ulSubmitContentForm li input {
+    width:560px;
+    height:25px;
+    background-image: url(images/styleimages/forms.png);
+	background-repeat:repeat-x;
+    border:1px solid #bfbfbf;
+}
+
+.ulSubmitContentForm li {
+    position:relative;
+}
+
+.ulSubmitContentForm .ErrMsg {
+    color:red;
+    position:absolute;
+    left:415px;
+    top:0px;
+    font-size:11px;
+}
+
+.ulSubmitContentForm .ErrMsg .error {
+    color:red;
+}
+/*注册页面*/
+
+.footer {
+    background-image:url(images/styleimages/footer-bg.png);
+    background-repeat:no-repeat;
+    width: 954px;
+    height:121px;
+	margin-left:auto;
+    margin-right:auto;
+    margin-bottom:15px;
+    margin-top:20px;
+    color:#5F6B70;
+    font-size:12px;
+}
+
+#bottomMenu {
+    float:right;
+}
+
+#bottomMenu ul li{
+    float:left;
+    margin-right:15px;
+    margin-top:40px;
+}
+
+#bottomMenu ul li a {
+    color:#5F6B70;
+    font-size:12px;
+    text-decoration:none;
+}
+
+#footerDesp {
+    margin-top:40px;
+    float:left;
+    margin-left:20px;
+}
+
+/*登陆页面Begin*/
+#divLoginForm {
+    width:500px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:100px;
+}
+
+#divLoginForm ul li{
+    float:left;
+    line-height:30px;
+    height:30px;
+}
+
+#divLoginForm ul li span{
+    line-height:40px;
+    width:100px;
+    float:left;
+    color:#6088a4;
+    text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);
+    font-weight:bold;
+}
+
+#divLoginForm ul li input{
+    line-height:30px;
+    height:30px;
+    width:380px;
+    float:left;
+    background-image: url(images/styleimages/forms.png);
+	background-repeat:repeat-x;
+    border:1px solid #bfbfbf;
+    padding-left:5px;
+    padding-right:5px;
+    font-size:16px;
+}
+
+#divLoginForm ul li {
+    position:relative;
+}
+
+#divLoginForm .errMsg {
+    position:absolute;
+    font-size:11px;
+    color:red;
+    clear:both;
+    width:500px;
+    margin:0px;
+    padding:0px;
+    left:0px;
+    top:24px;
+}   
+
+#loginSubmit {
+    display:block;
+    margin-top:30px;
+    width:80px;
+    background-color:aliceblue;
+    float:left;
+    text-align:center;
+    border:solid 1px #3ab8f0;
+    padding:5px 5px;
+    text-decoration:none;
+    background: -moz-linear-gradient(top, #53c9f5, #0ca1d7);
+    background: -webkit-gradient(linear, 0 0, 0 10, from(#53c9f5), to(#0ca1d7));
+    background-color: #0ca1d7;
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor:pointer;
+}
+
+.loginError {
+    float:left;
+    margin-top:32px;
+    margin-left:38px;
+    color:red;
+}
+/*登陆页面End*/
+
+/*Home index page begin*/
+#divHomeDesp h1{
+    color:white;
+    font-size:50px;
+    margin-top:20px;
+    margin-bottom:20px;
+    display:inline-block;
+    font-weight:bold;
+}
+
+#divHomeDesp p {
+    color:white;
+    text-indent:2em;
+    font-size:24px;
+    line-height:40px;
+}
+
+#divIndexContent .wrapper{
+    font-size:12px;
+    margin-top:10px;
+}
+
+#divIndexContent .wrapper > p {
+    text-indent:2em;
+    line-height:20px;
+    color:#065F9F;
+}
+
+#divSearchContent .left {
+    float:left;
+    width:200px;
+    height:375px;
+    background-image:url(images/styleimages/features-bg-2.png);
+}
+
+#divSearchContent .right {
+    float:right;
+    width:745px;
+    height:800px;
+}
+
+#ulSearchNav li {
+    width:205px;
+    height:52px;
+    line-height:52px;
+    margin-bottom:3px;
+}
+
+#ulSearchNav li.selected {
+    background-image:url(images/styleimages/features-selected-short.png);
+    background-repeat:no-repeat;
+}
+
+#ulSearchNav li a{
+    display:block;
+    padding-left:30px;
+    margin-left:15px;
+    text-decoration:none;
+    font-size:16px;
+    color:#a7a7a7;
+    background-image:url(images/styleimages/play.png);
+    background-repeat:no-repeat;
+    background-position:10px 21px;
+}
+
+#ulSearchNav li.selected a {
+    color:black;
+}
+
+#ulSearchNav li a:hover {
+    color:#be521c;
+    background-image:url(images/styleimages/redplay.png);
+}
+
+.tblFriendLinks {
+    width:322px;
+    float:left;
+    margin-left:5px;
+}
+
+#divDepartments {
+    float:left;
+    width:300px;
+    background-color:#d2dde5;
+    margin-left:5px;
+    line-height:25px;
+}
+
+#divDepartments ul li {
+    float:left;
+    margin-left:10px;
+    margin-top:10px;
+}
+
+#divDepartments ul li a {
+    white-space:nowrap;
+}
+
+.tblFriendLinks tr .col1
+{
+    width:100px;
+    text-align:center;
+    font-weight:bold;
+    vertical-align:top;
+    padding-top:6px;
+    color:#66828D;
+}
+
+.tblFriendLinks tr .col2
+{
+    line-height:25px;
+    vertical-align:top;
+    width:200px;
+}
+
+#divDepartments span {
+    font-size:14px;
+    font-weight:bold;
+    line-height:25px;
+    padding:5px;
+}
+
+.ulSearchButtons li {
+    float:left;
+    position:relative;
+    
+}
+
+.ulSearchButtons li div {
+    position:absolute;
+    width:20px;
+    height:20px;
+    background-image:url(images/styleimages/search.png);
+    background-repeat:no-repeat;
+    left:15px;
+    top:3px;
+}
+
+.ulSearchButtons li img {
+    position:absolute;
+    left:135px;
+    top:8px;
+    display:none;
+}
+
+.ulSearchButtons a {
+    width:145px;
+    height:18px;
+    font-size:12px;
+    display:block;
+    float:left;
+    line-height:18px;
+}
+
+
+.divSearchInputs div {
+    float:left;
+}
+
+.divSearchInputs input {
+    height:24px;
+    line-height:24px;
+    width:500px;
+}
+
+.divSearchInputs div {
+    float:left;
+}
+
+.divSearchInputs .label {
+    line-height:26px;
+    margin-right:5px;
+}
+
+.divSearchResult
+{
+    overflow-x:auto;
+    height:auto;
+    min-height:100px;
+}
+
+.divSearchResult table
+{
+    margin-top:5px;
+    min-width:100%;
+}
+
+.divSearchResult table th
+{
+    height:25px;
+    line-height:25px;
+    background-color:#13aadf;
+    text-align:left;
+    border:solid 1px #4bacc6;
+    border-left-width:0px;
+    padding-left:3px;
+    color:white;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.divSearchResult table tr
+{
+    background-color:#daeef3;
+}
+
+.divSearchResult table tr:hover
+{
+    background-color:#FF5500;
+    color:white;
+}
+
+.divSearchResult table .white
+{
+    background-color:white;
+}
+
+.divSearchResult table td
+{
+    height:25px;
+    line-height:25px;
+    text-align:left;
+    border:solid 1px #c3c3c3;
+    border-left-width:0px;
+    border-top-width:0px;
+    padding-left:3px;
+    white-space:nowrap;
+}
+
+
+.divSearchResult table .first
+{
+    border-left:solid 1px #c3c3c3;
+}
+
+.SearchEmptyResult
+{
+    display:inline-block;
+    margin-top:15px;
+    color:red;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.divSearchResult ul li {
+    float:left;
+    margin-top:10px;
+    margin-bottom:5px;
+    margin-right:20px;
+    line-height:22px;
+    font-weight:bold;
+}
+/*Home index page end*/

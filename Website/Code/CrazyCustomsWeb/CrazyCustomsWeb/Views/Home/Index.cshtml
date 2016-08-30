@@ -1,0 +1,438 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="pageheader">
+    <div class="wrapper" id="divHomeDesp">
+        <h1>通关宝能帮您做什么：</h1>
+        <p>我们的优势是集各种搜索海关信息于一站，提供一站式服务。搜索进港信息，放行信息，HS编码信息，离港时间等等。我们的优势是集各种搜索海关信息于一站，提供一站式服务。搜索进港信息，放行信息，HS编码信息，离港时间等等。</p>
+    </div>
+</div>
+<div class="pagewrapper" id="divIndexContent">
+    <div class="wrapper">
+        <p>简短的说明。比如使用方法什么的，搜索技巧之类的。简短的说明。比如使用方法什么的，搜索技巧之类的。简短的说明。比如使用方法什么的，搜索技巧之类的。简短的说明。比如使用方法什么的，搜索技巧之类的。</p>
+    </div>
+    <div class="wrapper" id="divSearchContent">
+        <div class="left">
+            <ul id="ulSearchNav">
+                <li class="selected" tag="divSearchDockEntry"><a href="javascript:void(0);">搜索进出门信息</a></li>
+                <li tag="divLading"><a href="javascript:void(0);">搜索进港信息</a></li>
+                <li tag="divAdmission"><a href="javascript:void(0);">搜索放行信息</a></li>
+                <li tag="divLeaveDate"><a href="javascript:void(0);">搜索离港时间</a></li>
+                <li tag="divPrerecordWarrant"><a href="javascript:void(0);">搜索预配仓单</a></li>
+            </ul>
+        </div>
+        <div class="right" id="divRightSearchContent">
+            @using (Html.BeginForm("Search", "Home", FormMethod.Post, new { id = "SearchCustomForm" }))
+            {
+                <div id="divSearchDockEntry" class="tabContent">
+                    <div>
+                        <div class="divSearchInputs">
+                            <div class="label">箱号:</div>
+                            <div><input id="boxNumberSearchEntryDock" type="text" name="boxNumberSearchEntryDock" /></div>
+                        </div>
+                        <ul class="ulSearchButtons">
+                            <li>
+                                <div></div>
+                                <a class="blueButton" searchtype="SearchEntryDock" href="javascript:void(0);">搜索进出门信息</a>
+                                <img src="~/Content/Images/StyleImages/loader.gif" />
+                            </li>
+                        </ul>
+                        <div class="clearFloat" ></div>
+                    </div>
+
+                    <div id="divSearchEntryDockResults" class="divSearchResult">
+                    </div>
+                </div>
+                
+                <div id="divLading" style="display:none;" class="tabContent">
+                    <div>
+                        <div class="divSearchInputs">
+                            <div class="label">箱号 / 提单号:</div>
+                            <div><input id="boxSearchLandingNumber" type="text" name="boxSearchLandingNumber" style="width:190px;" /></div>
+                            <div class="label" style="margin-left:15px;">船名:</div>
+                            <div><input id="boxSearchLandingConveyance" type="text" name="boxSearchLandingConveyance" style="width:100px;" /></div>
+                            <div class="label" style="margin-left:15px;">航次:</div>
+                            <div><input id="boxSearchLandingVoyageNumber" type="text" name="boxSearchLandingVoyageNumber" style="width:100px;" /></div>
+                        </div>
+                        <ul class="ulSearchButtons">
+                            <li>
+                                <div></div>
+                                <a class="blueButton" searchtype="SearchLanding" href="javascript:void(0);">搜索进港信息</a>
+                                <img src="~/Content/Images/StyleImages/loader.gif" />
+                            </li>
+                        </ul>
+                        <div class="clearFloat" ></div>
+                    </div>
+
+                    <div id="divSearchLandingResults" class="divSearchResult">
+                    </div>
+                </div>
+                
+                <div id="divAdmission" style="display:none;" class="tabContent">
+                    <div>
+                        <div class="divSearchInputs">
+                            <div class="label">箱号 / 提单号 / 海关编号:</div>
+                            <div><input id="boxNumberSearchAdmission" type="text" name="boxNumberSearchAdmission" style="width:420px;" /></div>
+                        </div>
+                        <ul class="ulSearchButtons">
+                            <li>
+                                <div></div>
+                                <a class="blueButton" searchtype="SearchAdmission" href="javascript:void(0);">搜索放行信息</a>
+                                <img src="~/Content/Images/StyleImages/loader.gif" />
+                            </li>
+                        </ul>
+                        <div class="clearFloat" ></div>
+                    </div>
+
+                    <div id="divSearchAdmissionResults" class="divSearchResult">
+                    </div>
+                </div>
+                
+                <div id="divLeaveDate" style="display:none;" class="tabContent">
+                    <div>
+                        <div class="divSearchInputs">
+                            <div class="label">港口:</div>
+                            <div><input id="boxLeaveDateDock" type="text" name="boxLeaveDateDock" style="width:190px;" /></div>
+                            <div class="label" style="margin-left:15px;">船名:</div>
+                            <div><input id="boxLeaveDateConveyance" type="text" name="boxLeaveDateConveyance" style="width:300px;" /></div>
+                        </div>
+                        <ul class="ulSearchButtons">
+                            <li>
+                                <div></div>
+                                <a class="blueButton" searchtype="SearchLeaveDate" href="javascript:void(0);">搜索离港时间</a>
+                                <img src="~/Content/Images/StyleImages/loader.gif" />
+                            </li>
+                        </ul>
+                        <div class="clearFloat" ></div>
+                    </div>
+
+                    <div id="divSearchLeaveDateResults" class="divSearchResult">
+                    </div>
+                </div>
+                
+                <div id="divPrerecordWarrant" style="display:none;" class="tabContent">
+                    <div>
+                        <div class="divSearchInputs">
+                            <div class="label">提单号:</div>
+                            <div><input id="boxNumberSearchPrerecordWarrant" type="text" name="boxNumberSearchPrerecordWarrant" style="width:520px;" /></div>
+                        </div>
+                        <ul class="ulSearchButtons">
+                            <li>
+                                <div></div>
+                                <a class="blueButton" searchtype="SearchPrerecordWarrant" href="javascript:void(0);">搜索预配仓单</a>
+                                <img src="~/Content/Images/StyleImages/loader.gif" />
+                            </li>
+                        </ul>
+                        <div class="clearFloat" ></div>
+                    </div>
+
+                    <div id="divSearchPrerecordWarrantResults" class="divSearchResult">
+                    </div>
+                </div>
+                
+                <input id="hdSearchType" type="hidden" name="searchType" value="" />
+            }
+            
+        </div>
+
+        <div class="clearFloat" ></div>
+    </div>
+
+    <!--下面是友情链接-->
+    <div class="wrapper">
+        <table class="tblFriendLinks" cellpadding="5" cellspacing="5">
+                <tbody><tr>
+                    <td class="col1">预配仓单</td>
+                    <td class="col2"><a target="_blank" href="http://edi.easipass.com/dataportal/q.do?qn=dp_premanifest_entry">预配仓单查询</a></td>
+                </tr>
+                <tr>
+                    <td class="col1">进港信息</td>
+                    <td class="col2"><a target="_blank" href="http://edi.easipass.com/dataportal/q.do?qn=dp_cst_vsl">电子装箱单</a></td>
+                </tr>
+                <tr>
+                    <td class="col1">港区放关</td>
+                    <td class="col2">
+                        <a target="_blank" href="http://www.spict.com/port/cntr/vslform.cfm">外高桥1</a> <a target="_blank" href="http://www.sipgzct.com/wat/controllerServlet.do?method=getinputmode">外高桥2</a> <a target="_blank" href="http://www.sect.com.cn/wat/controllerServlet.do?method=getinputmode">外高桥4</a> <a target="_blank" href="http://www.smct.com.cn:81/search/comm/com_user.jsp">外高桥5</a> <a target="_blank" href="http://www.shsict.com/as/query/search/com_user.jsp">洋山盛东</a> <a target="_blank" href="http://www.sgict.com.cn/gdweb/queryinclude/com.jsp">洋山冠东</a> <a target="_blank" href="http://218.1.104.251/zhbwat/">吴淞</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1">船舶信息</td>
+                    <td class="col2"><a target="_blank" href="http://edi.easipass.com/dataportal/q.do?qn=dp_export_shipinfo">船舶信息</a></td>
+                </tr>
+                <tr>
+                    <td class="col1">电子放行信息</td>
+                    <td class="col2"><a target="_blank" href="http://edi.easipass.com/dataportal/q.do?qn=dp_query_letpas">电子放行信息</a></td>
+                </tr>
+                <tr>
+                    <td class="col1">洋山二放</td>
+                    <td class="col2">
+                        <a target="_blank" href="http://www.shsict.com/as/query/search/com_user.jsp">盛东</a> <a target="_blank" href="http://www.sgict.com.cn/gdweb/queryinclude/com.jsp">冠东</a> 
+                    </td>
+                </tr>
+            </tbody></table>
+
+        <table class="tblFriendLinks" cellpadding="5" cellspacing="5">
+                <tbody><tr>
+                    <td class="col1">换单信息</td>
+                    <td class="col2">
+                        <a target="_blank" href="http://www.spict.com/portinfo/Normal/ShipPlanPage.aspx">外一</a>
+                        <a target="_blank" href="http://ffonline.sinotrans.com/SinoWebMarine/login_agent.jsp">外代</a>
+                        <a target="_blank" href="http://www.penavico.sh.cn/">外运</a>
+                        <a target="_blank" href="http://www.shsict.com/as/query/search/com_user.jsp">洋山进港查询（盛东）</a>
+                        <a target="_blank" href="http://www.sipgzct.com:82/as/query/search/com_user.jsp">外二</a>
+                        <a target="_blank" href="http://www.chinasailing.com.cn/cn/default.jsp">航华</a>
+                        <a target="_blank" href="http://www.zim.com/">以星</a><br>
+                        <a target="_blank" href="http://www.sect.com.cn/wat/controllerServlet.do?method=getinputmode">外四</a>
+                        <a target="_blank" href="http://www.cosfresh.com/">中货</a>
+                        <a target="_blank" href="http://www.unisco.com.cn/">联合航代</a>
+                        <a target="_blank" href="http://210.74.250.17:9080/e3/exchange/index.jsp">中海电子</a>
+                        <a target="_blank" href="http://www.smct.com.cn/mingdong/kbindex.jspa?page=927693249094789198727675838123839289&amp;id=27&amp;pid=14">外五</a>
+                        <a target="_blank" href="http://www.sctport.com.cn/newsctsite/kbindex.jspa?page=92769324909478919872767583812383928">吴淞</a>
+                        <a target="_blank" href="http://www.oocl.com/schi/">东方</a>
+                        <a target="_blank" href="http://www.portinfo.net.cn">港航信息</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1">接单信息</td>
+                    <td class="col2">
+                        <a target="_blank" href="http://www.customs.gov.cn/Default.aspx?tabid=5469">HS查询</a>
+                        <a target="_blank" href="http://www.shciq.gov.cn/jsp/ciq_hsfdjyjyQy.jsp">法定商检</a>
+                        <a target="_blank" href="http://www.co.ccpit.org/index.aspx">海关HS</a>
+                        <a target="_blank" href="http://www.hscode.net/">商品归类</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1">三检查询</td>
+                    <td class="col2">
+                        <a target="_blank" href="http://61.152.215.245:8000">3C1</a>
+                        <a target="_blank" href="http://61.152.215.245">3C2</a>
+                        <a target="_blank" href="http://edi.easipass.com/">提货</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1">EDI查询</td>
+                    <td class="col2">
+                        <a target="_blank" href="http://biz.easipass.com/epay/">EDI</a>
+                        <a target="_blank" href="http://www.easipass.com/">亿通网</a>
+                    </td>
+                </tr>
+            </tbody></table>
+
+        <div id="divDepartments">
+            <span style="color:#66828D;">相关部门：</span>
+            <ul>
+                <li><a target="_blank" href="http://www.customs.gov.cn/">中国海关</a></li>
+                <li><a target="_blank" href="http://www.eport.sh.cn/">上海电子口岸网</a></li>
+                <li><a target="_blank" href="http://www.eciq.cn/">中国电子检验检疫</a></li>
+                <li><a target="_blank" href="http://www.smert.gov.cn/gb/2/index.html">上海外经贸</a></li>
+                <li><a target="_blank" href="http://www.scba.com.cn/">报关协会</a></li>
+                <li><a target="_blank" href="http://www.itownet.cn/index.shtml">信城通</a></li>
+                <li><a target="_blank" href="http://202.127.48.151/applyrecord/">知识产权</a></li>
+                <li><a target="_blank" href="http://shanghai.customs.gov.cn/default.aspx">上海海关</a></li>
+                <li><a target="_blank" href="http://www.shciq.gov.cn/">出入境检验检疫局</a></li>
+                <li><a target="_blank" href="http://219.238.236.160:7001/wsbm/">报检员资格考试</a></li>
+                <li><a target="_blank" href="http://www.safe.gov.cn/model_safe/index.html">外汇管理局</a></li>
+                <li><a target="_blank" href="http://www.chinatax.gov.cn/n480462/index.html">国家税务局</a></li>
+                <li><a target="_blank" href="http://www.eport.sh.cn">21Shipping</a></li>
+                <li><a target="_blank" href="http://www.shcus.gov.cn/clearance/clearance.do?op=find">结关查询</a></li>
+                <li><a target="_blank" href="http://www.hscode.net/">商品编码查询</a></li>
+                <li><a target="_blank" href="http://www.customs.gov.cn/Default.aspx?Tabid=7196">海关化验结果查询</a></li>
+                <li><a target="_blank" href="http://202.127.48.151/applyrecord/">知识产权备案查询</a></li>
+                <li><a target="_blank" href="http://tariff.hscode.net/tariffquery.aspx">规范申报指引</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+@section headerScripts{
+    <link href="~/Content/themes/base/jquery-ui-1.10.1.css" type="text/css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-ui-1.10.1.js"></script>
+}
+
+@section scripts
+{
+    <script type="text/javascript">
+        var availableDocks = [
+            { py: "y1", name: "洋一" },
+            { py: "y3", name: "洋三" },
+            { py: "w1", name: "外一" },
+            { py: "w2", name: "外二" },
+            { py: "w4", name: "外四" },
+            { py: "w5", name: "外五" },
+            { py: "sglj", name: "上港罗泾" },
+            { py: "sgzhb", name: "上港张华浜" }];
+
+        $(document).ready(function () {
+            // set auto complete boxes
+            $("#boxLeaveDateDock").autocomplete({
+                source: function (req, res) {
+                    var keyword = req.term;
+                    var result = [];
+                    for (var i = 0; i < availableDocks.length; i++) {
+                        if (availableDocks[i].py.indexOf(keyword) >= 0 || availableDocks[i].name.indexOf(keyword) >= 0)
+                            result[result.length] = availableDocks[i].name;
+                    }
+                    res(result);
+                }
+            });
+            // set search button click events
+            $("#ulSearchNav>li").click(function () {
+                $("#ulSearchNav>li").removeClass("selected");
+                $(this).addClass("selected");
+                // hide other divs
+                $('.tabContent').css('display', 'none');
+                var divID = '#' + $(this).attr("tag");
+                $(divID).fadeIn(300);
+            });
+
+            $("#SearchCustomForm").submit(function (event) {
+                event.preventDefault(); //prevent the actual form post
+                AjaxCallHelper(this, OnAjaxCallSuccess, OnAjaxCompleted);
+            });
+
+            $(".ulSearchButtons a").click(function () {
+                var searchType = $(this).attr("searchtype");
+                $("#hdSearchType").val(searchType);
+                if (ValidateInput(searchType)) {
+                    $(".ulSearchButtons a").removeClass("blueButton").addClass("grayButton");
+                    $(this).next().css("display", "block");
+                    $("#SearchCustomForm").submit();
+                }
+            });
+        });
+
+        function OnAjaxCallSuccess(result) {
+            var workingDiv = GetWorkingSearchResultDiv();
+            if (workingDiv == null) {
+                alert("fatal error. please contact admin");
+                return;
+            }
+            if (result) {
+                var jsonObject = jQuery.parseJSON(result);
+                if (jsonObject.HasError) {
+                    alert(jsonObject.ErrorMessage);
+                }
+                else {
+                    var searchType = $("#hdSearchType").val();
+                    if (searchType == "SearchEntryDock") {
+                        var html = HtmlConstructor.ConstructDockEntryWebResult(jsonObject);
+                        $(workingDiv).html(html);
+                    }
+                    else if (searchType == "SearchAdmission") {
+                        var html = HtmlConstructor.ConstructAdmissionWebResult(jsonObject);
+                        $(workingDiv).html(html);
+                    }
+                    else if (searchType == "SearchPrerecordWarrant") {
+                        var html = HtmlConstructor.ConstructPrerecordWarrantWebResult(jsonObject);
+                        $(workingDiv).html(html);
+                    }
+                    else if (searchType == "SearchLeaveDate") {
+                        var html = HtmlConstructor.ConstructLeaveDateWebResult(jsonObject);
+                        $(workingDiv).html(html);
+                    }
+                    else if (searchType == "SearchLanding") {
+                        var html = HtmlConstructor.ConstructLandingWebResult(jsonObject);
+                        $(workingDiv).html(html);
+                    }
+                }
+            }
+            else {
+                var html = HtmlConstructor.ConstructEmptyResult();
+                $(workingDiv).html(html);
+            }
+        }
+
+        function OnAjaxCompleted() {
+            $(".ulSearchButtons img").css("display", "none");
+            $(".ulSearchButtons a").removeClass("grayButton").addClass("blueButton");
+        }
+
+        function ValidateInput(inputType) {
+            if (inputType == "SearchEntryDock") {
+                $("#divSearchEntryDockResults").html("");
+                var inputBox = $("#boxNumberSearchEntryDock");
+                if ($(inputBox).val() == "") {
+                    $(inputBox).css("border-color", "red");
+                    return false;
+                }
+                else {
+                    $(inputBox).css("border-color", "");
+                    return true;
+                }
+            }
+            else if (inputType == "SearchAdmission") {
+                var inputBox = $("#boxNumberSearchAdmission");
+                if ($(inputBox).val() == "") {
+                    $(inputBox).css("border-color", "red");
+                    return false;
+                }
+                else {
+                    $(inputBox).css("border-color", "");
+                    return true;
+                }
+            }
+            else if (inputType == "SearchPrerecordWarrant") {
+                var inputBox = $("#boxNumberSearchPrerecordWarrant");
+                if ($(inputBox).val() == "") {
+                    $(inputBox).css("border-color", "red");
+                    return false;
+                }
+                else {
+                    $(inputBox).css("border-color", "");
+                    return true;
+                }
+            }
+            else if (inputType == "SearchLanding") {
+                var inputBox = $("#boxSearchLandingNumber");
+                if ($(inputBox).val() == "") {
+                    $(inputBox).css("border-color", "red");
+                    return false;
+                }
+                else {
+                    $(inputBox).css("border-color", "");
+                    return true;
+                }
+            }
+            else if (inputType == "SearchLeaveDate") {
+                var inputBoxLeaveDateDock = $("#boxLeaveDateDock");
+                var inputBoxLeaveDateConveyance = $("#boxLeaveDateConveyance");
+                var flag = true;
+                if ($(inputBoxLeaveDateDock).val() == "") {
+                    $(inputBoxLeaveDateDock).css("border-color", "red");
+                    flag = false;
+                }
+                else {
+                    $(inputBoxLeaveDateDock).css("border-color", "");
+                }
+
+                if ($(inputBoxLeaveDateConveyance).val() == "") {
+                    $(inputBoxLeaveDateConveyance).css("border-color", "red");
+                    flag = false;
+                }
+                else {
+                    $(inputBoxLeaveDateConveyance).css("border-color", "");
+                }
+                return flag;
+            }
+            return false;
+        }
+
+        function GetWorkingSearchResultDiv() {
+            var searchType = $("#hdSearchType").val();
+            if (searchType == "SearchEntryDock")
+                return $("#divSearchEntryDockResults");
+            else if (searchType == "SearchLanding")
+                return $("#divSearchLandingResults")
+            else if (searchType == "SearchAdmission")
+                return $("#divSearchAdmissionResults")
+            else if (searchType == "SearchLeaveDate")
+                return $("#divSearchLeaveDateResults")
+            else if (searchType == "SearchPrerecordWarrant")
+                return $("#divSearchPrerecordWarrantResults")
+            else
+                return null;
+        }
+    </script>
+}

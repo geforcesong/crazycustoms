@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrazyCustomsWeb", "CrazyCustomsWeb\CrazyCustomsWeb.csproj", "{29E50E7D-F3CB-4076-A344-77CC7A05A7A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLib", "DataAccessLib\DataAccessLib.csproj", "{BF97B182-D5A7-42D9-B643-D88D6D002BBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrazyCustomsEntity", "..\..\..\Processor\CrazyCustomsEntity\CrazyCustomsEntity.csproj", "{6C36BF4E-14F1-4ED0-BD36-661979A1C86B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrazyCustomsService", "..\..\..\Processor\CrazyCustomsProcessor\CrazyCustomsService\CrazyCustomsService.csproj", "{1B90822D-CA76-4CE6-9B1A-F295855F2FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessorUtilities", "..\..\..\Processor\CrazyCustomsProcessor\ProcessorUtilities\ProcessorUtilities.csproj", "{E9D408C3-65EB-4818-8980-70BBC6E6ABDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiderMan", "..\..\..\Processor\CrazyCustomsProcessor\SpiderMan\SpiderMan.csproj", "{507DB75C-1CA6-4B82-80BD-7A0C03504FE3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs30
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CrazyCustomsWeb\\CrazyCustomsWeb.csproj
+		SccProjectName1 = CrazyCustomsWeb
+		SccLocalPath1 = CrazyCustomsWeb
+		SccProjectUniqueName2 = DataAccessLib\\DataAccessLib.csproj
+		SccProjectName2 = DataAccessLib
+		SccLocalPath2 = DataAccessLib
+		SccProjectUniqueName3 = ..\\..\\..\\Processor\\CrazyCustomsEntity\\CrazyCustomsEntity.csproj
+		SccProjectName3 = ../../../Processor/CrazyCustomsEntity
+		SccLocalPath3 = ..\\..\\..\\Processor\\CrazyCustomsEntity
+		SccProjectUniqueName4 = ..\\..\\..\\Processor\\CrazyCustomsProcessor\\CrazyCustomsService\\CrazyCustomsService.csproj
+		SccProjectName4 = ../../../Processor/CrazyCustomsProcessor/CrazyCustomsService
+		SccLocalPath4 = ..\\..\\..\\Processor\\CrazyCustomsProcessor\\CrazyCustomsService
+		SccProjectUniqueName5 = ..\\..\\..\\Processor\\CrazyCustomsProcessor\\ProcessorUtilities\\ProcessorUtilities.csproj
+		SccProjectName5 = ../../../Processor/CrazyCustomsProcessor/ProcessorUtilities
+		SccLocalPath5 = ..\\..\\..\\Processor\\CrazyCustomsProcessor\\ProcessorUtilities
+		SccProjectUniqueName6 = ..\\..\\..\\Processor\\CrazyCustomsProcessor\\SpiderMan\\SpiderMan.csproj
+		SccProjectName6 = ../../../Processor/CrazyCustomsProcessor/SpiderMan
+		SccLocalPath6 = ..\\..\\..\\Processor\\CrazyCustomsProcessor\\SpiderMan
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29E50E7D-F3CB-4076-A344-77CC7A05A7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E50E7D-F3CB-4076-A344-77CC7A05A7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E50E7D-F3CB-4076-A344-77CC7A05A7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E50E7D-F3CB-4076-A344-77CC7A05A7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF97B182-D5A7-42D9-B643-D88D6D002BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF97B182-D5A7-42D9-B643-D88D6D002BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF97B182-D5A7-42D9-B643-D88D6D002BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF97B182-D5A7-42D9-B643-D88D6D002BBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C36BF4E-14F1-4ED0-BD36-661979A1C86B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C36BF4E-14F1-4ED0-BD36-661979A1C86B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C36BF4E-14F1-4ED0-BD36-661979A1C86B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C36BF4E-14F1-4ED0-BD36-661979A1C86B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B90822D-CA76-4CE6-9B1A-F295855F2FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B90822D-CA76-4CE6-9B1A-F295855F2FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B90822D-CA76-4CE6-9B1A-F295855F2FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B90822D-CA76-4CE6-9B1A-F295855F2FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9D408C3-65EB-4818-8980-70BBC6E6ABDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9D408C3-65EB-4818-8980-70BBC6E6ABDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9D408C3-65EB-4818-8980-70BBC6E6ABDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9D408C3-65EB-4818-8980-70BBC6E6ABDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{507DB75C-1CA6-4B82-80BD-7A0C03504FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507DB75C-1CA6-4B82-80BD-7A0C03504FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507DB75C-1CA6-4B82-80BD-7A0C03504FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507DB75C-1CA6-4B82-80BD-7A0C03504FE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
